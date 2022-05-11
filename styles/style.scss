@@ -22,7 +22,7 @@ a {
 }
 
 :root {
-  --primary-color: #ee6a26;
+  --primary-color: #ce5214;
   --secondary-color: #012841;
   --ligth-text-color: #eadeda;
   --dark-text-color: #110b11;
@@ -47,6 +47,19 @@ header {
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid var(--secondary-color);
+
+  animation: header 1s;
+
+  @keyframes header {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+      border: 0;
+    }
+  }
 
   #menu-btn {
     font-size: 3rem;
@@ -128,7 +141,7 @@ header {
 
       span {
         font-family: "Roboto", sans-serif;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 500;
         text-transform: uppercase;
         color: var(--primary-color);
@@ -147,7 +160,7 @@ header {
 
         margin-top: 3rem;
         font-size: 1.8rem;
-        color: var(--primary-color);
+        color: var(--ligth-text-color);
         font-weight: 500;
       }
 
@@ -164,7 +177,19 @@ header {
         cursor: pointer;
 
         &:hover {
-          transform: scale(1.1);
+          filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.3)) contrast(130%);
+        }
+      }
+      animation: homeText 1s;
+
+      @keyframes homeText {
+        0% {
+          margin-left: 0;
+          opacity: 0;
+        }
+        100% {
+          margin-left: 10%;
+          opacity: 1;
         }
       }
     }
@@ -172,7 +197,7 @@ header {
     .swiper-pagination-bullet {
       padding: 1rem;
       border-radius: 5px;
-      background-color: var(--secondary-color);
+      background-color: var(--primary-color);
     }
   }
 }
@@ -223,11 +248,9 @@ header {
       flex-direction: column;
       border-bottom: 3px solid var(--dark-text-color);
 
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 1);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(12.7px);
-      -webkit-backdrop-filter: blur(12.7px);
-      border: 1px solid rgba(255, 255, 255, 1);
+      border-bottom: 2px solid var(--secondary-color);
 
       li {
         margin-top: 4rem;
