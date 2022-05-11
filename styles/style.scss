@@ -37,16 +37,16 @@ header {
   width: 100%;
   padding: 2rem 10%;
   position: fixed;
-  z-index: 999;
+  top: 0;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.7px);
-  -webkit-backdrop-filter: blur(12.7px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid var(--secondary-color);
 
   #menu-btn {
     font-size: 3rem;
@@ -60,7 +60,7 @@ header {
     text-align: center;
     line-height: 1;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: var(--primary-color);
     font-size: 2rem;
 
@@ -79,7 +79,7 @@ header {
       margin-right: 2rem;
 
       a {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         font-weight: 700;
         color: var(--secondary-color);
 
@@ -108,77 +108,90 @@ header {
 .home {
   width: 100%;
   height: 100vh;
-  background: url("../assets/bg5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
 
-  .home-image {
-    position: absolute;
-    width: 100rem;
-    right: -1rem;
-    bottom: 0;
-
+  .swiper {
+    width: 100%;
+    height: 100%;
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+    }
+    .home-text {
+      width: 60.5rem;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 10%;
+
+      span {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--primary-color);
+      }
+
+      h1 {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 6rem;
+        color: var(--ligth-text-color);
+        margin-top: 1.5rem;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+
+        margin-top: 3rem;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .button {
+        padding: 2rem 4.5rem;
+        border-radius: 5px;
+        border: 0;
+        background: var(--primary-color);
+        color: var(--ligth-text-color);
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 3rem;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .swiper-pagination-bullet {
+      padding: 1rem;
+      border-radius: 5px;
+      background-color: var(--secondary-color);
     }
   }
-
-  .home-text {
-    width: 60.5rem;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 10%;
-
-    span {
-      font-family: "Roboto", sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: 6rem;
-      font-weight: 700;
-      line-height: 6rem;
-      color: var(--ligth-text-color);
-      margin-top: 1.5rem;
-    }
-
-    p {
-      font-family: "Roboto", sans-serif;
-
-      margin-top: 3rem;
-      font-size: 2rem;
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    button {
-      margin-top: 3rem;
-      padding: 1rem 3rem;
-      background: #012841;
-    }
-  }
-
-  .budget-fast {
-    width: 60.5rem;
-    height: 40rem;
-    background: #110b11;
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-
-    color: #eadeda;
-  }
-
-  //Criar cotação rapida
-  //arrumar bg com funbdo black
 }
+
+.budget-fast {
+  width: 60.5rem;
+  height: 40rem;
+  background: #110b1148;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+
+  color: #eadeda;
+}
+
+//Criar cotação rapida
+//arrumar bg com funbdo black
+
 .about {
   width: 100%;
   height: 100vh;

@@ -11,6 +11,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <title>R&PL-Transportes</title>
   </head>
   <body>
@@ -29,19 +33,36 @@
     </header>
     <main>
       <section class="home">
-        <div class="home-image">
-          <img src="assets/s-truck-1.png" alt="" />
-        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/bg-2.jpg" alt="" />
+              <div class="home-text">
+                <span>Somos especializados em transporte</span>
+                <h1>Com foco em veículos de pequeno e médio porte</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Veritatis deserunt provident consequatur facilis harum.
+                </p>
 
-        <div class="home-text">
-          <span>Somos especializados em transporte</span>
-          <h1>Com foco em veículos de pequeno e médio porte</h1>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
-            deserunt provident consequatur facilis harum.
-          </p>
+                <button class="button">Ver serviços</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/bg01.jpg" alt="" />
+              <div class="home-text">
+                <span>Somos especializados em transporte</span>
+                <h1>Com foco em veículos de pequeno e médio porte</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Veritatis deserunt provident consequatur facilis harum.
+                </p>
 
-          <button>Ver serviços</button>
+                <button class="button">Ver serviços</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
 
         <div class="budget-fast">
@@ -52,6 +73,7 @@
 
       <section class="about"></section>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
-  <script src="js/main.js"></script>
 </html>

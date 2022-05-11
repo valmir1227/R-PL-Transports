@@ -10,3 +10,15 @@ window.addEventListener("scroll", () => {
   menu.classList.remove("fa-times");
   navbar.classList.remove("active");
 });
+
+//swiper
+var swiper = new Swiper(".mySwiper", {
+  direction: "horizontal",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});
