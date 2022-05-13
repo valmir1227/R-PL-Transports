@@ -22,3 +22,13 @@ var swiper = new Swiper(".mySwiper", {
     delay: 5000,
   },
 });
+
+var swiper = new Swiper(".mySwiperTestimonials", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
