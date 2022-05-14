@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
 });
 
 //swiper
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
   direction: "horizontal",
   pagination: {
     el: ".swiper-pagination",
@@ -23,12 +23,16 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var swiper = new Swiper(".mySwiperTestimonials", {
+const swiperTestimonials = new Swiper(".swiperTestimonials", {
   slidesPerView: 2,
-  spaceBetween: 30,
   centeredSlides: true,
+  spaceBetween: 0,
+  grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  autoplay: {
+    delay: 3000,
   },
 });
