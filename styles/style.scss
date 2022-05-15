@@ -24,7 +24,7 @@ a {
 :root {
   --primary-color: #ce5214;
   --secondary-color: #012841;
-  --ligth-text-color: #eadeda;
+  --ligth-text-color: #f5edeb;
   --dark-text-color: #110b11;
 }
 
@@ -37,7 +37,6 @@ header {
   width: 100%;
   padding: 2rem 10%;
   position: fixed;
-  top: 0;
   z-index: 99;
   display: flex;
   justify-content: space-between;
@@ -48,11 +47,12 @@ header {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid var(--secondary-color);
 
-  animation: header 1s ease;
+  animation: header 1.5s ease 1s;
 
   @keyframes header {
     0% {
       top: -100px;
+      opacity: 0;
     }
     100% {
       top: 0;
@@ -73,13 +73,14 @@ header {
     text-align: center;
     line-height: 1;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 
     span {
       font-weight: 800;
-      font-size: 4rem;
+      font-size: 2.5rem;
       letter-spacing: -2px;
       color: var(--secondary-color);
     }
@@ -95,6 +96,7 @@ header {
         font-size: 1.6rem;
         font-weight: 700;
         color: var(--secondary-color);
+        text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 
         &:hover {
           color: var(--primary-color);
@@ -142,7 +144,8 @@ header {
       span {
         font-family: "Roboto", sans-serif;
         font-size: 2rem;
-        font-weight: 500;
+        font-weight: 600;
+        text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
         text-transform: uppercase;
         color: var(--primary-color);
       }
@@ -153,6 +156,7 @@ header {
         line-height: 6rem;
         color: var(--ligth-text-color);
         margin-top: 1.5rem;
+        text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
       }
 
       p {
@@ -162,6 +166,7 @@ header {
         font-size: 1.8rem;
         color: var(--ligth-text-color);
         font-weight: 500;
+        text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
       }
 
       .button {
@@ -180,7 +185,7 @@ header {
           filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.3)) contrast(130%);
         }
       }
-      animation: homeText 1s ease;
+      animation: homeText 1.5s ease 1s;
 
       @keyframes homeText {
         0% {
@@ -212,10 +217,11 @@ header {
     border-radius: 5px;
     padding: 2rem 2rem;
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
-    border: 0;
-    animation: budget-fast 1s ease;
+    border: 1px solid #ce5214;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+
+    animation: budget-fast 1.5s ease 1s;
 
     @keyframes budget-fast {
       0% {
@@ -249,7 +255,7 @@ header {
       margin-top: 1rem;
       padding: 1rem;
       color: var(--ligth-text-color);
-      background: rgba(205, 205, 205, 0.4);
+      background: #313131;
       border-radius: 2px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(2px);
@@ -259,10 +265,10 @@ header {
       outline: none;
 
       option {
-        color: var(--dark-text-color);
+        color: var(--ligth-text-color);
         font-weight: 500;
         font-size: 1.4rem;
-        background: var(--ligth-text-color);
+        background: #313131;
       }
     }
   }
@@ -274,7 +280,7 @@ header {
     padding: 1rem;
     color: var(--ligth-text-color);
 
-    background: rgba(205, 205, 205, 0.4);
+    background: #313131;
     border-radius: 2px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
@@ -304,7 +310,6 @@ header {
   width: 100%;
   height: 100vh;
 
-  background-attachment: fixed;
   position: relative;
   .waves {
     width: 100%;
@@ -321,15 +326,19 @@ header {
     transform: translateX(-50%);
     p {
       font-size: 2.5rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--ligth-text-color);
+      text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
     }
 
     h2 {
       font-size: 4.8rem;
       letter-spacing: -1px;
+      font-weight: 800;
       margin-top: 3rem;
       color: var(--secondary-color);
+      text-transform: uppercase;
+      text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
     }
   }
 
@@ -347,7 +356,7 @@ header {
       border-radius: 5px;
       position: relative;
       cursor: pointer;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
 
       &:hover {
@@ -358,6 +367,7 @@ header {
         width: 100%;
         height: 75%;
         object-fit: cover;
+        border-radius: 5px 5px 0 0;
       }
 
       div {
@@ -365,24 +375,24 @@ header {
         bottom: 0;
         width: 100%;
         height: 25%;
-        transition: opacity 0.3s;
         border: inherit;
-        background: var(--secondary-color);
+        background: #fff;
 
         h3 {
           font-size: 2rem;
-          margin-top: 1.7rem;
           font-weight: 700;
-          color: var(--ligth-text-color);
+          color: var(--dark-text-color);
           text-align: center;
-          margin: 0 2rem;
+          margin: 1rem 1rem 0;
+          text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
         }
         p {
-          color: var(--ligth-text-color);
+          color: var(--dark-text-color);
+          text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
           font-size: 1.4rem;
           margin: 1rem 2rem;
           text-align: left;
-          font-weight: 300;
+          font-weight: 400;
         }
       }
     }
@@ -393,7 +403,8 @@ header {
   width: 100vw;
   height: 60vh;
   padding: 2rem 10%;
-  background: #ce5214;
+  background: url("../assets/black-concrete-texture.jpg");
+  background-size: cover;
   overflow: hidden;
 
   .busines-about {
@@ -410,30 +421,35 @@ header {
 
       h2 {
         font-size: 4.8rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--ligth-text-color);
+        text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.5);
       }
 
       p {
         font-size: 1.6rem;
         color: var(--ligth-text-color);
+        font-weight: 400;
 
         span {
           text-transform: uppercase;
           font-size: 1.6rem;
           font-weight: 600;
+          color: var(--primary-color);
         }
       }
     }
     .about-image {
-      width: 60rem;
-      height: 60rem;
-      border: 5px solid var(--secondary-color);
+      width: 55rem;
+      height: 55rem;
+      border: 5px solid var(--primary-color);
       border-radius: 50%;
 
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        clip-path: circle();
       }
     }
   }
@@ -459,7 +475,7 @@ header {
     flex-direction: column;
     svg {
       width: 5rem;
-      fill: var(--secondary-color);
+      fill: var(--primary-color);
     }
 
     p {
@@ -470,7 +486,7 @@ header {
       p {
         font-size: 2rem;
         font-weight: 700;
-        color: var(--secondary-color);
+        color: var(--primary-color);
       }
     }
   }
@@ -482,17 +498,26 @@ header {
   padding: 2rem 10%;
   display: flex;
   justify-content: space-around;
-  background: var(--primary-color);
+  background: url("../assets/black-concrete-texture.jpg");
+  background-size: cover;
   .title {
     h3 {
       font-size: 4.8rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--ligth-text-color);
+      text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
     }
 
     p {
       font-size: 1.6rem;
       color: var(--ligth-text-color);
+      font-weight: 300;
+
+      span {
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        font-weight: 400;
+      }
     }
 
     a {
@@ -501,6 +526,16 @@ header {
       font-size: 1.6rem;
       gap: 5px;
       color: var(--ligth-text-color);
+
+      &:hover {
+        color: var(--ligth-text-color);
+      }
+
+      span {
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        font-weight: 400;
+      }
     }
 
     .location {
@@ -522,10 +557,11 @@ header {
     color: #eadeda;
     border-radius: 5px;
     padding: 2rem;
+
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
-    border: 0;
+    border: 1px solid #ce5214;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 
     width: 50rem;
     display: flex;
@@ -545,7 +581,7 @@ header {
       padding: 1rem;
       color: var(--ligth-text-color);
 
-      background: rgba(205, 205, 205, 0.4);
+      background: #313131;
       border-radius: 2px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(2px);
@@ -562,7 +598,7 @@ header {
       padding: 1rem;
       color: var(--ligth-text-color);
 
-      background: rgba(205, 205, 205, 0.4);
+      background: #313131;
       border-radius: 2px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(2px);

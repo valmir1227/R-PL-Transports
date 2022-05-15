@@ -25,7 +25,7 @@ a {
 :root {
   --primary-color: #ce5214;
   --secondary-color: #012841;
-  --ligth-text-color: #eadeda;
+  --ligth-text-color: #f5edeb;
   --dark-text-color: #110b11;
 }
 
@@ -38,7 +38,6 @@ header {
   width: 100%;
   padding: 2rem 10%;
   position: fixed;
-  top: 0;
   z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,13 +53,14 @@ header {
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid var(--secondary-color);
-  -webkit-animation: header 1s ease;
-          animation: header 1s ease;
+  -webkit-animation: header 1.5s ease 1s;
+          animation: header 1.5s ease 1s;
 }
 
 @-webkit-keyframes header {
   0% {
     top: -100px;
+    opacity: 0;
   }
   100% {
     top: 0;
@@ -72,6 +72,7 @@ header {
 @keyframes header {
   0% {
     top: -100px;
+    opacity: 0;
   }
   100% {
     top: 0;
@@ -92,14 +93,15 @@ header .logo {
   text-align: center;
   line-height: 1;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 }
 
 header .logo span {
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 2.5rem;
   letter-spacing: -2px;
   color: var(--secondary-color);
 }
@@ -118,6 +120,7 @@ header .navigation-bar .navigation-list li a {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--secondary-color);
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 }
 
 header .navigation-bar .navigation-list li a:hover {
@@ -166,14 +169,15 @@ header .navigation-bar .navigation-list li .button:hover {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-left: 10%;
-  -webkit-animation: homeText 1s ease;
-          animation: homeText 1s ease;
+  -webkit-animation: homeText 1.5s ease 1s;
+          animation: homeText 1.5s ease 1s;
 }
 
 .home .swiper .home-text span {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
   text-transform: uppercase;
   color: var(--primary-color);
 }
@@ -184,6 +188,7 @@ header .navigation-bar .navigation-list li .button:hover {
   line-height: 6rem;
   color: var(--ligth-text-color);
   margin-top: 1.5rem;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 }
 
 .home .swiper .home-text p {
@@ -192,6 +197,7 @@ header .navigation-bar .navigation-list li .button:hover {
   font-size: 1.8rem;
   color: var(--ligth-text-color);
   font-weight: 500;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 }
 
 .home .swiper .home-text .button {
@@ -254,13 +260,13 @@ header .navigation-bar .navigation-list li .button:hover {
   border-radius: 5px;
   padding: 2rem 2rem;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
-  border: 0;
-  -webkit-animation: budget-fast 1s ease;
-          animation: budget-fast 1s ease;
+  border: 1px solid #ce5214;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  -webkit-animation: budget-fast 1.5s ease 1s;
+          animation: budget-fast 1.5s ease 1s;
 }
 
 @-webkit-keyframes budget-fast {
@@ -312,7 +318,7 @@ header .navigation-bar .navigation-list li .button:hover {
   margin-top: 1rem;
   padding: 1rem;
   color: var(--ligth-text-color);
-  background: rgba(205, 205, 205, 0.4);
+  background: #313131;
   border-radius: 2px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -323,10 +329,10 @@ header .navigation-bar .navigation-list li .button:hover {
 }
 
 .home .budget-fast select option {
-  color: var(--dark-text-color);
+  color: var(--ligth-text-color);
   font-weight: 500;
   font-size: 1.4rem;
-  background: var(--ligth-text-color);
+  background: #313131;
 }
 
 .home input {
@@ -335,7 +341,7 @@ header .navigation-bar .navigation-list li .button:hover {
   margin-top: 1rem;
   padding: 1rem;
   color: var(--ligth-text-color);
-  background: rgba(205, 205, 205, 0.4);
+  background: #313131;
   border-radius: 2px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -363,7 +369,6 @@ header .navigation-bar .navigation-list li .button:hover {
 .services {
   width: 100%;
   height: 100vh;
-  background-attachment: fixed;
   position: relative;
 }
 
@@ -386,15 +391,19 @@ header .navigation-bar .navigation-list li .button:hover {
 
 .services .services-container p {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ligth-text-color);
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
 }
 
 .services .services-container h2 {
   font-size: 4.8rem;
   letter-spacing: -1px;
+  font-weight: 800;
   margin-top: 3rem;
   color: var(--secondary-color);
+  text-transform: uppercase;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
 }
 
 .services .cards-wraper {
@@ -417,8 +426,8 @@ header .navigation-bar .navigation-list li .button:hover {
   border-radius: 5px;
   position: relative;
   cursor: pointer;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -433,6 +442,7 @@ header .navigation-bar .navigation-list li .button:hover {
   height: 75%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .services .cards-wraper .card div {
@@ -440,34 +450,34 @@ header .navigation-bar .navigation-list li .button:hover {
   bottom: 0;
   width: 100%;
   height: 25%;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
   border: inherit;
-  background: var(--secondary-color);
+  background: #fff;
 }
 
 .services .cards-wraper .card div h3 {
   font-size: 2rem;
-  margin-top: 1.7rem;
   font-weight: 700;
-  color: var(--ligth-text-color);
+  color: var(--dark-text-color);
   text-align: center;
-  margin: 0 2rem;
+  margin: 1rem 1rem 0;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
 }
 
 .services .cards-wraper .card div p {
-  color: var(--ligth-text-color);
+  color: var(--dark-text-color);
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
   font-size: 1.4rem;
   margin: 1rem 2rem;
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .about {
   width: 100vw;
   height: 60vh;
   padding: 2rem 10%;
-  background: #ce5214;
+  background: url("../assets/black-concrete-texture.jpg");
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -493,31 +503,38 @@ header .navigation-bar .navigation-list li .button:hover {
 
 .about .busines-about .text h2 {
   font-size: 4.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ligth-text-color);
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.5);
 }
 
 .about .busines-about .text p {
   font-size: 1.6rem;
   color: var(--ligth-text-color);
+  font-weight: 400;
 }
 
 .about .busines-about .text p span {
   text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: 600;
+  color: var(--primary-color);
 }
 
 .about .busines-about .about-image {
-  width: 60rem;
-  height: 60rem;
-  border: 5px solid var(--secondary-color);
+  width: 55rem;
+  height: 55rem;
+  border: 5px solid var(--primary-color);
   border-radius: 50%;
 }
 
 .about .busines-about .about-image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle();
+          clip-path: circle();
 }
 
 .data-services {
@@ -556,7 +573,7 @@ header .navigation-bar .navigation-list li .button:hover {
 
 .data-services div svg {
   width: 5rem;
-  fill: var(--secondary-color);
+  fill: var(--primary-color);
 }
 
 .data-services div p {
@@ -567,7 +584,7 @@ header .navigation-bar .navigation-list li .button:hover {
 .data-services div div p {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .contact {
@@ -579,18 +596,27 @@ header .navigation-bar .navigation-list li .button:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: var(--primary-color);
+  background: url("../assets/black-concrete-texture.jpg");
+  background-size: cover;
 }
 
 .contact .title h3 {
   font-size: 4.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ligth-text-color);
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
 }
 
 .contact .title p {
   font-size: 1.6rem;
   color: var(--ligth-text-color);
+  font-weight: 300;
+}
+
+.contact .title p span {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 400;
 }
 
 .contact .title a {
@@ -603,6 +629,16 @@ header .navigation-bar .navigation-list li .button:hover {
   font-size: 1.6rem;
   gap: 5px;
   color: var(--ligth-text-color);
+}
+
+.contact .title a:hover {
+  color: var(--ligth-text-color);
+}
+
+.contact .title a span {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 400;
 }
 
 .contact .title .location {
@@ -624,11 +660,11 @@ header .navigation-bar .navigation-list li .button:hover {
   border-radius: 5px;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
-  border: 0;
+  border: 1px solid #ce5214;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   width: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -652,7 +688,7 @@ header .navigation-bar .navigation-list li .button:hover {
   margin-top: 1rem;
   padding: 1rem;
   color: var(--ligth-text-color);
-  background: rgba(205, 205, 205, 0.4);
+  background: #313131;
   border-radius: 2px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -669,7 +705,7 @@ header .navigation-bar .navigation-list li .button:hover {
   margin-top: 1rem;
   padding: 1rem;
   color: var(--ligth-text-color);
-  background: rgba(205, 205, 205, 0.4);
+  background: #313131;
   border-radius: 2px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
