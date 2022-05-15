@@ -459,7 +459,7 @@ header .navigation-bar .navigation-list li .button:hover {
   transition: all 0.3s ease;
 }
 
-.services .cards-wraper .card:hover {
+.services .cards-wraper .card:hover.card {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

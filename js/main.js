@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
 });
 
 //swiper
-const swiper = new Swiper(".maySwiper", {
+const swiper = new Swiper(".mySwiper", {
   direction: "horizontal",
   pagination: {
     el: ".swiper-pagination",
@@ -55,13 +55,27 @@ const homeButton = {
   delay: 200,
 };
 
+const budgetFast = {
+  duration: 600,
+  delay: 200,
+  easing: "ease",
+  origin: "right",
+  rotate: {
+    x: 0,
+    y: 0,
+    z: 0,
+  },
+  cleanup: true,
+};
+
 scrollReveal.reveal(".home-span", homeSpan);
 scrollReveal.reveal(".home-title", homeTitle);
 scrollReveal.reveal(".home-paragraph", homeParagraph);
 scrollReveal.reveal(".home-button", homeButton);
-scrollReveal.reveal(".budget-fast", {
-  duration: 600,
-  delay: 200,
+scrollReveal.reveal(".budget-fast", budgetFast);
+scrollReveal.reveal(".cards-wraper", {
+  duration: 800,
+  delay: 400,
   easing: "ease",
   origin: "left",
   rotate: {
@@ -71,6 +85,58 @@ scrollReveal.reveal(".budget-fast", {
   },
   cleanup: true,
 });
+
+scrollReveal.reveal(".text", {
+  duration: 800,
+  delay: 200,
+  easing: "ease",
+  origin: "left",
+  rotate: {
+    x: 100,
+    y: 0,
+    z: 0,
+  },
+  cleanup: true,
+});
+scrollReveal.reveal(".about-image", {
+  duration: 800,
+  delay: 200,
+  easing: "ease",
+  origin: "left",
+  rotate: {
+    x: 0,
+    y: 0,
+    z: 0,
+  },
+  cleanup: true,
+});
+
+scrollReveal.reveal(".title", {
+  duration: 800,
+  delay: 200,
+  easing: "ease",
+  origin: "left",
+  rotate: {
+    x: 0,
+    y: 0,
+    z: 0,
+  },
+  cleanup: true,
+});
+
+scrollReveal.reveal(".form", {
+  duration: 800,
+  delay: 200,
+  easing: "ease",
+  origin: "left",
+  rotate: {
+    x: 0,
+    y: 0,
+    z: 0,
+  },
+  cleanup: true,
+});
+
 //Scroll Header Indicator
 window.onscroll = () => {
   myFunction();
