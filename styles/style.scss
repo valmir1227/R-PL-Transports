@@ -45,9 +45,24 @@ header {
 
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid var(--secondary-color);
+  //border-bottom: 2px solid var(--secondary-color);
 
   animation: header 1.5s ease 1s;
+
+  .progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--ligth-text-color);
+
+    .progress-bar {
+      height: 4px;
+      background: var(--primary-color);
+      width: 0%;
+    }
+  }
 
   @keyframes header {
     0% {
@@ -148,15 +163,28 @@ header {
         text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
         text-transform: uppercase;
         color: var(--primary-color);
+        //visibility: hidden;
       }
 
-      h1 {
+      .home-title {
         font-size: 6rem;
         font-weight: 700;
         line-height: 6rem;
         color: var(--ligth-text-color);
         margin-top: 1.5rem;
         text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
+        visibility: hidden;
+        opacity: 1;
+      }
+
+      .home-title-two {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 6rem;
+        color: var(--ligth-text-color);
+        margin-top: 1.5rem;
+        text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
+        // visibility: hidden;
       }
 
       p {
@@ -169,7 +197,7 @@ header {
         text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
       }
 
-      .button {
+      .home-button {
         padding: 2rem 4.5rem;
         border-radius: 5px;
         border: 0;
@@ -180,6 +208,7 @@ header {
         margin-top: 3rem;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
         cursor: pointer;
+        visibility: hidden;
 
         &:hover {
           filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.3)) contrast(130%);
@@ -220,6 +249,7 @@ header {
     backdrop-filter: blur(0px);
     border: 1px solid #ce5214;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
 
     animation: budget-fast 1.5s ease 1s;
 

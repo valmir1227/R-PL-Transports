@@ -52,9 +52,23 @@ header {
   background: white;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid var(--secondary-color);
   -webkit-animation: header 1.5s ease 1s;
           animation: header 1.5s ease 1s;
+}
+
+header .progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--ligth-text-color);
+}
+
+header .progress-container .progress-bar {
+  height: 4px;
+  background: var(--primary-color);
+  width: 0%;
 }
 
 @-webkit-keyframes header {
@@ -182,7 +196,18 @@ header .navigation-bar .navigation-list li .button:hover {
   color: var(--primary-color);
 }
 
-.home .swiper .home-text h1 {
+.home .swiper .home-text .home-title {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 6rem;
+  color: var(--ligth-text-color);
+  margin-top: 1.5rem;
+  text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
+  visibility: hidden;
+  opacity: 1;
+}
+
+.home .swiper .home-text .home-title-two {
   font-size: 6rem;
   font-weight: 700;
   line-height: 6rem;
@@ -200,7 +225,7 @@ header .navigation-bar .navigation-list li .button:hover {
   text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 }
 
-.home .swiper .home-text .button {
+.home .swiper .home-text .home-button {
   padding: 2rem 4.5rem;
   border-radius: 5px;
   border: 0;
@@ -212,9 +237,10 @@ header .navigation-bar .navigation-list li .button:hover {
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  visibility: hidden;
 }
 
-.home .swiper .home-text .button:hover {
+.home .swiper .home-text .home-button:hover {
   -webkit-filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.3)) contrast(130%);
           filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.3)) contrast(130%);
 }
@@ -265,6 +291,7 @@ header .navigation-bar .navigation-list li .button:hover {
   border: 1px solid #ce5214;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
   -webkit-animation: budget-fast 1.5s ease 1s;
           animation: budget-fast 1.5s ease 1s;
 }
