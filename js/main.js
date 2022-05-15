@@ -38,6 +38,7 @@ const homeSpan = {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 };
 
 const homeTitle = {
@@ -66,6 +67,7 @@ const budgetFast = {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 };
 
 scrollReveal.reveal(".home-span", homeSpan);
@@ -84,6 +86,7 @@ scrollReveal.reveal(".cards-wraper", {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 });
 
 scrollReveal.reveal(".text", {
@@ -97,6 +100,7 @@ scrollReveal.reveal(".text", {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 });
 scrollReveal.reveal(".about-image", {
   duration: 800,
@@ -109,6 +113,7 @@ scrollReveal.reveal(".about-image", {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 });
 
 scrollReveal.reveal(".title", {
@@ -122,6 +127,7 @@ scrollReveal.reveal(".title", {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 });
 
 scrollReveal.reveal(".form", {
@@ -135,6 +141,7 @@ scrollReveal.reveal(".form", {
     z: 0,
   },
   cleanup: true,
+  reset: true,
 });
 
 //Scroll Header Indicator
