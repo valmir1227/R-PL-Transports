@@ -76,8 +76,8 @@ scrollReveal.reveal(".home-paragraph", homeParagraph);
 scrollReveal.reveal(".home-button", homeButton);
 scrollReveal.reveal(".budget-fast", budgetFast);
 scrollReveal.reveal(".cards-wraper", {
-  duration: 800,
-  delay: 400,
+  duration: 600,
+  delay: 300,
   easing: "ease",
   origin: "left",
   rotate: {

@@ -12,6 +12,23 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  scrollbar-color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  scrollbar-color: var(--primary-color);
+  border-radius: 3px;
 }
 
 ul {
@@ -756,6 +773,106 @@ header .navigation-bar .navigation-list li .button:hover {
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  padding: 2rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--dark-text-color);
+  color: var(--ligth-text-color);
+  position: relative;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container .company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+footer .container .company p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+footer .container .company a {
+  color: var(--ligth-text-color);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+footer .container .company a:hover {
+  color: var(--primary-color);
+}
+
+footer .footer-contact {
+  text-align: center;
+}
+
+footer .footer-contact p {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 300;
+  margin-bottom: 0rem;
+}
+
+footer .footer-contact a {
+  color: var(--ligth-text-color);
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+footer .footer-contact a span {
+  font-size: inherit;
+}
+
+footer .address p.address-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+footer .address p {
+  font-size: 1.6rem;
+}
+
+footer p.copy {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {

@@ -11,6 +11,22 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  scrollbar-color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  scrollbar-color: var(--primary-color);
+  border-radius: 3px;
 }
 
 ul {
@@ -653,6 +669,88 @@ header {
 
       cursor: pointer;
     }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--dark-text-color);
+  color: var(--ligth-text-color);
+  position: relative;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .company {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      p {
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--primary-color);
+      }
+
+      a {
+        color: var(--ligth-text-color);
+        font-size: 1.6rem;
+        text-transform: capitalize;
+        font-weight: 300;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .footer-contact {
+    text-align: center;
+    p {
+      font-size: 1.6rem;
+      color: var(--primary-color);
+      font-weight: 300;
+
+      margin-bottom: 0rem;
+    }
+    a {
+      color: var(--ligth-text-color);
+      font-size: 1.6rem;
+      font-weight: 300;
+
+      span {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .address {
+    p.address-title {
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  p.copy {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
