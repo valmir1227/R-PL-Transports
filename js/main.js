@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
 });
 
 //swiper
-const swiper = new Swiper(".mySwiper", {
+const swaiper = new Swiper(".mySwiper", {
   direction: "horizontal",
   pagination: {
     el: ".swiper-pagination",
