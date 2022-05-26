@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script async src="https://unpkg.com/scrollreveal"></script>
     <title>R&PL-Transportes</title>
   </head>
   <body>
@@ -37,18 +37,16 @@
 
     <main>
       <section id="home" class="home">
-        <div class="home-background">
-          <picture>
-            <source
-              media="(max-width: 630px)"
-              srcset="
-                https://www.scania.com/content/www/br/pt/home/about-scania/newsroom/news/2021/news-article-template-simple2/_jcr_content/image.img.90.360.jpeg/1628280170313.jpg
-              "
-              type="image/jpg"
-            />
-            <img src="assets/bg02.jpg" alt="" />
-          </picture>
-        </div>
+        <picture>
+          <source
+            media="(max-width: 630px)"
+            srcset="
+              https://www.scania.com/content/www/br/pt/home/about-scania/newsroom/news/2021/news-article-template-simple2/_jcr_content/image.img.90.360.jpeg/1628280170313.jpg
+            "
+            type="image/jpg"
+          />
+          <img src="assets/bg02.jpg" alt="" />
+        </picture>
         <div class="home-text">
           <span class="home-span">Somos especializados em transporte</span>
           <h1 class="home-title">
@@ -308,6 +306,6 @@
 
     <div></div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script async src="js/main.js"></script>
   </body>
 </html>
