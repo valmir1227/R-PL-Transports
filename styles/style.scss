@@ -753,13 +753,32 @@ footer {
   }
 }
 
-//MOBILE MIN
+
+@media (min-width:480px) {
+  
+
+
+
+
+
+
+ }
+
+
 @media (min-width: 320px) {
   header {
     padding: 1rem 5%;
+    .logo {
+      font-size: 1.6rem;
 
-    .navigation-list li {
-      margin-left: 5%;
+      span {
+        font-size: 2rem;
+      }
+    }
+    .navigation-list {
+      li {
+        margin-left: 5%;
+      }
     }
   }
   .home {
@@ -792,7 +811,7 @@ footer {
     }
     .budget-fast {
       width: 100%;
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
   }
   .services {
@@ -876,7 +895,7 @@ footer {
 
   footer {
     height: 50vh;
-    padding: 1rem;
+    padding: 2rem 5%;
     flex-direction: column;
     align-items: flex-start;
 
