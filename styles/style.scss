@@ -187,7 +187,7 @@ header {
       margin-top: 3rem;
       font-size: 1.8rem;
       color: var(--ligth-text-color);
-      font-weight: 500;
+      font-weight: 400;
       text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
     }
 
@@ -765,23 +765,25 @@ footer {
   .home {
     flex-direction: column;
     height: auto;
-    padding: 12rem 5% 2rem;
+    padding: 9rem 5% 2rem;
 
     .home-text {
       width: 100%;
 
       span {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
 
       .home-title {
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
         margin-top: 1rem;
       }
 
       p {
+        font-size: 1.6rem;
         margin-top: 2rem;
+        font-weight: 400;
       }
 
       .home-button {
@@ -794,8 +796,7 @@ footer {
     }
   }
   .services {
-    height: 235vh;
-   
+    height: 240vh;
     .services-container {
       p {
         font-size: 2rem;
