@@ -794,7 +794,8 @@ footer {
     }
   }
   .services {
-    height: 250vh;
+    height: 235vh;
+   
     .services-container {
       p {
         font-size: 2rem;
@@ -807,6 +808,14 @@ footer {
     }
     .cards-wraper {
       height: auto;
+      padding: 2rem 5%;
+      margin: 0;
+
+      .card {
+        width: 100%;
+        min-height: 60rem;
+        height: auto;
+      }
     }
   }
 
@@ -847,21 +856,21 @@ footer {
     padding: 2rem 5%;
     justify-content: center;
     flex-direction: column;
-   // align-items: center;
+    // align-items: center;
 
-   .title{
-    .location {
-      width: 100%;
-      height: 30rem;
+    .title {
+      .location {
+        width: 100%;
+        height: 30rem;
+      }
+      h3 {
+        font-size: 3rem;
+      }
     }
-     h3{
-       font-size: 3rem;
-     }
-   } 
 
-   form {
-     width: 100%;
-   }
+    form {
+      width: 100%;
+    }
   }
 
   footer {
@@ -877,13 +886,12 @@ footer {
     }
     .footer-contact {
       width: 20rem;
-      
     }
     p.copy {
       width: 100%;
       text-align: center;
       font-size: 1.4rem;
-      bottom: 0;
+      bottom: 2rem;
     }
   }
 }

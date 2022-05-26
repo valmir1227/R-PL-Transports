@@ -874,7 +874,7 @@ footer p.copy {
     margin-top: 4rem;
   }
   .services {
-    height: 250vh;
+    height: 235vh;
   }
   .services .services-container p {
     font-size: 2rem;
@@ -884,6 +884,13 @@ footer p.copy {
     margin-top: 1rem;
   }
   .services .cards-wraper {
+    height: auto;
+    padding: 2rem 5%;
+    margin: 0;
+  }
+  .services .cards-wraper .card {
+    width: 100%;
+    min-height: 60rem;
     height: auto;
   }
   .about {
@@ -964,7 +971,7 @@ footer p.copy {
     width: 100%;
     text-align: center;
     font-size: 1.4rem;
-    bottom: 0;
+    bottom: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
