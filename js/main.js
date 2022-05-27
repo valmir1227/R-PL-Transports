@@ -11,20 +11,9 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove("active");
 });
 
-//swiper
-const swaiper = new Swiper(".mySwiper", {
-  direction: "horizontal",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  autoplay: {
-    delay: 5000,
-  },
-});
-
 //Scroll review
 
+// TASK: Transformar em pequenas funcoes
 window.scrollReveal = ScrollReveal({ reset: true });
 
 const homeSpan = {
@@ -157,3 +146,37 @@ function myFunction() {
   let scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+//API dos estados brasileiros
+function createNode(element) {
+  return document.createElement(element);
+}
+function append(parent, el) {
+  return parent.appendChild(el);
+}
+
+async function getBrazilianUf() {
+  let selectUfLeaving = document.querySelector("#ufLeaving");
+  let selectUfDestination = document.querySelector("#ufDestination");
+
+  await fetch(
+    "https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome"
+  )
+    .then((resp) => resp.json())
+    .then(function (data) {
+      let saidas = data;
+
+      return saidas.map(function (saida) {
+        let optionDestination = createNode("option");
+        let optionLeaving = createNode("option");
+
+        optionDestination.innerHTML = `${saida.nome}`;
+        optionLeaving.innerHTML = `${saida.nome}`;
+
+        append(selectUfLeaving, optionLeaving);
+        append(selectUfDestination, optionDestination);
+      });
+    });
+}
+
+getBrazilianUf();

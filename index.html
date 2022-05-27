@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <script async src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>R&PL-Transportes</title>
   </head>
   <body>
@@ -62,11 +62,8 @@
           <form action="">
             <label for="saida">Local de saida</label>
 
-            <select name="saida" id="saida">
-              <option value="sp">São Paulo</option>
-              <option value="mg">Minas Gerais</option>
-              <option value="rj">Rio de Janeiro</option>
-              <option value="bh">Bahia</option>
+            <select name="saida" id="ufLeaving">
+              <option>Selecione...</option>
             </select>
             <br />
 
@@ -78,19 +75,16 @@
               placeholder="Ex: Jundiaí"
             />
 
-            <label for="destino">Local de destino</label>
+            <label for="saida">Local de destino</label>
 
-            <select name="destino" id="destino">
-              <option value="sp">São Paulo</option>
-              <option value="mg">Minas Gerais</option>
-              <option value="rj">Rio de Janeiro</option>
-              <option value="bh">Bahia</option>
+            <select name="destino" id="ufDestination">
+              <option>Selecione...</option>
             </select>
 
-            <label for="cidade">Cidade </label>
+            <label for="cidadeDestino">Cidade </label>
             <input
               type="text"
-              id="cidade"
+              id="cidadeDestino"
               name="cidade"
               placeholder="Ex: Belo Horizonte"
             />
@@ -306,6 +300,6 @@
 
     <div></div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script async src="js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
