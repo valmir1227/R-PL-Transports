@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Trabalhar logo no PHS-->
-    <link rel="shortcut icon" href="assets/logo.jpeg" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/logo.jpeg" type="image/jpeg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -45,7 +44,7 @@
             "
             type="image/jpg"
           />
-          <img src="assets/bg02.jpg" alt="" />
+          <img src="assets/bg02.jpg" alt="caminhão scania" />
         </picture>
         <div class="home-text">
           <span class="home-span">Somos especializados em transporte</span>
@@ -60,39 +59,34 @@
         <div class="budget-fast">
           <p>Faça um orçamento rápido</p>
           <form action="">
-            <label for="saida">Local de saida</label>
+            <label for="leaving">Local de saida</label>
 
-            <select name="saida" id="ufLeaving">
+            <select name="leaving" id="ufLeaving">
               <option>Selecione...</option>
             </select>
             <br />
 
-            <label for="cidade">Cidade </label>
-            <input
-              type="text"
-              id="cidade"
-              name="cidade"
-              placeholder="Ex: Jundiaí"
-            />
+            <label for="city">Cidade </label>
+            <input type="text" id="city" name="city" placeholder="Cidade" />
 
-            <label for="saida">Local de destino</label>
+            <label for="leaving">Local de destino</label>
 
             <select name="destino" id="ufDestination">
               <option>Selecione...</option>
             </select>
 
-            <label for="cidadeDestino">Cidade </label>
+            <label for="destinationCity">Cidade </label>
             <input
               type="text"
-              id="cidadeDestino"
-              name="cidade"
-              placeholder="Ex: Belo Horizonte"
+              id="destinationCity"
+              name="destinationCity"
+              placeholder="Cidade"
             />
 
-            <label for="veiculo">Veículo </label>
+            <label for="vehicle">Veículo </label>
             <input
               type="text"
-              id="veiculo"
+              id="vehicle"
               name="veiculo"
               placeholder="Ex: Honda Civic"
             />
@@ -169,7 +163,12 @@
               nossos clientes.
             </p>
           </div>
-          <div class="about-image"><img src="assets/about.svg" alt="" /></div>
+          <div class="about-image">
+            <img
+              src="assets/about.svg"
+              alt="inlustação de um caminhão guincho puxando um carro na cor laranja"
+            />
+          </div>
         </div>
       </section>
 
