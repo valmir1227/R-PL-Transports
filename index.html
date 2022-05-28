@@ -32,6 +32,7 @@
       <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
       </div>
+      <button id="teste">CLICA</button>
     </header>
 
     <main>
@@ -58,7 +59,7 @@
         </div>
         <div class="budget-fast">
           <p>Faça um orçamento rápido</p>
-          <form action="">
+          <form id="form" action="">
             <label for="leaving">Local de saida</label>
 
             <select name="leaving" id="ufLeaving">
@@ -66,11 +67,26 @@
             </select>
             <br />
 
-            <label for="city">Cidade </label>
+            <label for="city">Cidade sainda</label>
             <input
               type="text"
               id="leavingCity"
               name="city"
+              placeholder="Cidade"
+            />
+            <label for="vehicle">Veículo </label>
+            <input
+              type="text"
+              id="vehicle"
+              name="veiculo"
+              placeholder="Ex: Honda Civic 2020"
+            />
+
+            <label for="destinationCity">Cidade destino</label>
+            <input
+              type="text"
+              id="destinationCity"
+              name="destinationCity"
               placeholder="Cidade"
             />
 
@@ -80,23 +96,7 @@
               <option>Selecione...</option>
             </select>
 
-            <label for="destinationCity">Cidade </label>
-            <input
-              type="text"
-              id="destinationCity"
-              name="destinationCity"
-              placeholder="Cidade"
-            />
-
-            <label for="vehicle">Veículo </label>
-            <input
-              type="text"
-              id="vehicle"
-              name="veiculo"
-              placeholder="Ex: Honda Civic"
-            />
-
-            <a class="button" href="">Enviar</a>
+            <a id="budgetButton" class="button" target="_blank">Envivar</a>
           </form>
         </div>
       </section>

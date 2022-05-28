@@ -184,18 +184,39 @@ async function getBrazilianUf() {
       });
     });
 
-  selectUfLeaving.addEventListener("change", () => {
-    let optionLeaving = selectUfLeaving.children[selectUfLeaving.selectedIndex];
-    let optionLivingText = optionLeaving.textContent;
+  function budgetFast() {
+    const budgetButton = document.getElementById("budgetButton");
 
-    selectUfDestination.addEventListener("change", () => {
-      let optionDestination =
-        selectUfDestination.children[selectUfDestination.selectedIndex];
-      let optionDestinationText = optionDestination.textContent;
-      console.log(optionDestinationText);
+    let optionLeaving;
+    let optionLivingText;
+    let optionDestination;
+    let optionDestinationText;
+
+    selectUfLeaving.addEventListener("change", () => {
+      optionLeaving = selectUfLeaving.children[selectUfLeaving.selectedIndex];
+      optionLivingText = optionLeaving.textContent;
     });
-    console.log(optionLivingText);
-  });
+    selectUfDestination.addEventListener("change", () => {
+      optionDestination =
+        selectUfDestination.children[selectUfDestination.selectedIndex];
+      optionDestinationText = optionDestination.textContent;
+
+      let vehicleInput = document.getElementById("vehicle").value;
+      let destinationCity = document.getElementById("destinationCity").value;
+      let leavingCity = document.getElementById("leavingCity").value;
+
+      budgetButton.setAttribute(
+        "href",
+        `https://wa.me/5533991113641?text=Olá gostaria de um orçamento:
+        Local de saida ${leavingCity} - ${optionLivingText}para 
+        ${destinationCity} - ${optionDestinationText}, veículo ${vehicleInput}`
+      );
+      console.log(vehicleInput);
+    });
+  }
+  let clica = document.getElementById("teste");
+
+  budgetFast();
 }
 
 getBrazilianUf();
