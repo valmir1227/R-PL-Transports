@@ -174,29 +174,28 @@ async function getBrazilianUf() {
         let optionDestination = createNode("option");
         let optionLeaving = createNode("option");
 
-        //?textContent
         optionDestination.textContent = `${saida.nome}`;
         optionLeaving.textContent = `${saida.nome}`;
 
         append(selectUfLeaving, optionLeaving);
         append(selectUfDestination, optionDestination);
 
-        // console.log(optionDestination.value);
+        //console.log(optionLeaving);
       });
     });
 
-  function test() {
-    let selectUfLeaving = document.getElementById("ufLeaving");
-    let optionText =
-      selectUfLeaving.options[selectUfLeaving.selectedIndex].text;
+  selectUfLeaving.addEventListener("change", () => {
+    let optionLeaving = selectUfLeaving.children[selectUfLeaving.selectedIndex];
+    let optionLivingText = optionLeaving.textContent;
 
-    let optionValue =
-      selectUfLeaving.options[selectUfLeaving.selectedIndex].value;
-
-    selectUfLeaving.addEventListener("change", function () {
-      console.log(optionText, optionValue);
+    selectUfDestination.addEventListener("change", () => {
+      let optionDestination =
+        selectUfDestination.children[selectUfDestination.selectedIndex];
+      let optionDestinationText = optionDestination.textContent;
+      console.log(optionDestinationText);
     });
-  }
-  test();
+    console.log(optionLivingText);
+  });
 }
+
 getBrazilianUf();
