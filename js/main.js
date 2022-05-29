@@ -192,11 +192,9 @@ async function getBrazilianUf() {
     let optionDestination;
     let optionDestinationText;
 
-    selectUfLeaving.addEventListener("change", () => {
+    budgetButton.addEventListener("click", (e) => {
       optionLeaving = selectUfLeaving.children[selectUfLeaving.selectedIndex];
       optionLivingText = optionLeaving.textContent;
-    });
-    selectUfDestination.addEventListener("change", () => {
       optionDestination =
         selectUfDestination.children[selectUfDestination.selectedIndex];
       optionDestinationText = optionDestination.textContent;
@@ -208,13 +206,11 @@ async function getBrazilianUf() {
       budgetButton.setAttribute(
         "href",
         `https://wa.me/5533991113641?text=Olá gostaria de um orçamento:
-        Local de saida ${leavingCity} - ${optionLivingText}para 
-        ${destinationCity} - ${optionDestinationText}, veículo ${vehicleInput}`
+          Local de saida ${leavingCity} - ${optionLivingText} para 
+          ${destinationCity} - ${optionDestinationText}, veículo ${vehicleInput}`
       );
-      console.log(vehicleInput);
     });
   }
-  let clica = document.getElementById("teste");
 
   budgetFast();
 }
