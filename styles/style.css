@@ -51,6 +51,18 @@ body {
   overflow-x: hidden;
 }
 
+body .whatsapp {
+  position: fixed;
+  z-index: 99999;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+body .whatsapp i {
+  font-size: 4rem;
+  color: #26d366;
+}
+
 header {
   width: 100%;
   padding: 2rem 10%;

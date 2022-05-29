@@ -203,6 +203,8 @@ async function getBrazilianUf() {
       let destinationCity = document.getElementById("destinationCity").value;
       let leavingCity = document.getElementById("leavingCity").value;
 
+      // O formulário so poderá ser encviado caso esteja totalmente preenchido!
+      //Refatorar código 
       budgetButton.setAttribute(
         "href",
         `https://wa.me/5533991113641?text=Olá gostaria de um orçamento:

@@ -47,6 +47,18 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+
+  .whatsapp {
+    position: fixed;
+    z-index: 99999;
+    right: 2rem;
+    bottom: 2rem;
+
+    i {
+      font-size: 4rem;
+      color: #26d366;
+    }
+  }
 }
 
 header {
