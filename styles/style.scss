@@ -39,8 +39,7 @@ a {
 
 :root {
   --primary-color: #ce5214;
-  --secondary-color: #012841;
-  --ligth-text-color: #f5edeb;
+  --ligth-text-color: #ebebeb;
   --dark-text-color: #110b11;
 }
 
@@ -156,7 +155,7 @@ header {
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem 10%;
 
   position: relative;
@@ -633,8 +632,8 @@ footer {
   }
   .home {
     flex-direction: column;
-    height: auto;
-    padding: 9rem 5% 2rem;
+    height: 100vh;
+    padding: 9rem 5%;
 
     .home-text {
       width: 100%;
@@ -665,7 +664,6 @@ footer {
     }
   }
   .services {
-    height: 240vh;
     .services-container {
       p {
         font-size: 2rem;
@@ -774,8 +772,6 @@ footer {
 
 @media (min-width: 600px) {
   .services {
-    height: 255vh;
-
     .cards-wraper .card {
       width: 50rem;
     }
@@ -933,11 +929,6 @@ footer {
 }
 
 @media (min-width: 1281px) and (max-width: 1399px) {
-  .services {
-    min-height: 160rem;
-    height: auto;
-  }
-
   .about {
     padding: 2rem 5%;
 
@@ -993,25 +984,14 @@ footer {
 
 .services {
   width: 100%;
-  height: 100vh;
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  height: auto;
 
-  position: relative;
-  .waves {
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
   .services-container {
-    position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
-    top: 2rem;
     p {
+      margin-top: 2rem;
       font-size: 2.5rem;
       font-weight: 700;
       color: var(--dark-text-color);
@@ -1022,8 +1002,8 @@ footer {
       font-size: 4.8rem;
       letter-spacing: -1px;
       font-weight: 800;
-      margin-top: 3rem;
-      color: var(--secondary-color);
+      margin-top: 1rem;
+      color: var(--dark-text-color);
       text-transform: uppercase;
       text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.3);
     }
@@ -1035,11 +1015,11 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
-    margin-top: 6rem;
+    margin-top: 2rem;
 
     .card {
       width: 40rem;
-      height: 60rem;
+      height: auto;
       border-radius: 5px;
       position: relative;
       cursor: pointer;
