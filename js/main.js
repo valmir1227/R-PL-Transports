@@ -14,6 +14,20 @@ function toggleMobileMenu() {
 }
 toggleMobileMenu();
 
+//dark-mode
+function darkMode() {
+  const html = document.querySelector("html");
+  const iconDarkMode = document.querySelector(".fa-sun");
+  const buttonDarkMode = document.querySelector(".button-dark-mode");
+
+  buttonDarkMode.addEventListener("click", () => {
+    html.classList.toggle("dark-mode-theme");
+    iconDarkMode.classList.toggle("fa-sun");
+    iconDarkMode.classList.toggle("fa-moon");
+  });
+}
+darkMode();
+
 //Scroll review
 function scrollReveal() {
   window.scrollReveal = ScrollReveal({ reset: true });
@@ -218,4 +232,3 @@ async function getBrazilianUf() {
 }
 
 getBrazilianUf();
-

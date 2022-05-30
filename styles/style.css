@@ -40,15 +40,29 @@ a {
 }
 
 :root {
-  --primary-color: rgb(206, 82, 20);
-  --ligth-text-color: #ebebeb;
+  --primary-color: #e96320;
+  --light-color: #e4e4e4;
+  --ligth-text-color: #e4e4e4;
   --dark-text-color: #141414;
+  --dark-color: #161616;
+  --dark-color-500: #e4e4e4;
+  --text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
+}
+
+.dark-mode-theme:root {
+  --primary-color: #ed7d45;
+  --light-color: #1f1f1f;
+  --ligth-text-color: #dddddd;
+  --dark-text-color: #d6d6d6;
+  --dark-color: #d6d6d6;
+  --dark-color-500: #2b2b2b;
   --text-shadow: 0px 1px 5px rgba(3, 1, 1, 0.2);
 }
 
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  background: var(--light-color);
 }
 
 body .whatsapp {
@@ -78,7 +92,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  background: white;
+  background: var(--light-color);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -89,7 +103,7 @@ header .progress-container {
   left: 0;
   width: 100%;
   height: 4px;
-  background: var(--ligth-text-color);
+  background: var(--ligth-color);
 }
 
 header .progress-container .progress-bar {
@@ -120,7 +134,7 @@ header .logo span {
   font-weight: 800;
   font-size: 2.5rem;
   letter-spacing: -2px;
-  color: var(--dark-text-color);
+  color: var(--dark-color);
 }
 
 header .navigation-bar .navigation-list {
@@ -134,9 +148,9 @@ header .navigation-bar .navigation-list li {
 }
 
 header .navigation-bar .navigation-list li a {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--dark-text-color);
   text-shadow: var(--text-shadow);
 }
 
@@ -158,6 +172,17 @@ header .navigation-bar .navigation-list li .button {
 header .navigation-bar .navigation-list li .button:hover {
   background: transparent;
   color: var(--ligth-text-color);
+}
+
+header .navigation-bar .navigation-list li .button-dark-mode {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+header .navigation-bar .navigation-list li .button-dark-mode i {
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
 .home {
@@ -249,13 +274,13 @@ header .navigation-bar .navigation-list li .button:hover {
 .home .budget-fast {
   width: 50rem;
   height: auto;
-  color: #eadeda;
+  color: var(--ligth-text-color);
   border-radius: 5px;
   padding: 2rem 2rem;
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
-  border: 1px solid #ce5214;
+  border: 1px solid var(--primary-color);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   visibility: hidden;
@@ -351,6 +376,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: var(--light-color);
 }
 
 .data-services div {
@@ -378,6 +404,7 @@ input {
 .data-services div p {
   font-size: 3rem;
   font-weight: 800;
+  color: var(--dark-text-color);
 }
 
 .data-services div div p {
@@ -455,13 +482,13 @@ input {
 
 .contact form {
   margin-top: 2rem;
-  color: #eadeda;
+  color: var(--ligth-text-color);
   border-radius: 5px;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
-  border: 1px solid #ce5214;
+  border: 1px solid var(--primary-color);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   width: 50rem;
@@ -541,16 +568,12 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--dark-text-color);
+  background: var(--dark-color);
   color: var(--ligth-text-color);
   position: relative;
   background: var(--dark-text-color);
-  background: -webkit-gradient(linear, left top, left bottom, from(#141414), to(#141414f5));
-  background: linear-gradient(to bottom, #141414, #141414f5);
-  background: -webkit-linear-gradient(to bottom, #141414, #141414f8);
+  background: -webkit-gradient(linear, left top, left bottom, from(#141414), to(#161616));
+  background: linear-gradient(to bottom, #141414, #161616);
 }
 
 footer .container {
@@ -877,7 +900,7 @@ footer p.copy {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: #ffffff;
+    background: var(--light-color);
     -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid var(--primary-color);
@@ -890,7 +913,7 @@ footer p.copy {
   }
   .navigation-bar.active .navigation-list li a {
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--dark-color);
   }
   .navigation-bar.active .navigation-list li::before {
     content: "";
@@ -1076,6 +1099,7 @@ footer p.copy {
 .services {
   width: 100%;
   height: auto;
+  background: var(--light-color);
 }
 
 .services .services-container {
@@ -1147,24 +1171,24 @@ footer p.copy {
   width: 100%;
   height: 25%;
   border: inherit;
-  background: #fff;
+  background: var(--dark-color-500);
 }
 
 .services .cards-wraper .card div h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--dark-text-color);
+  color: var(--dark-color);
   text-align: center;
   margin: 1rem 1rem 0;
   text-shadow: var(--text-shadow);
 }
 
 .services .cards-wraper .card div p {
-  color: var(--dark-text-color);
+  color: var(--dark-color);
   text-shadow: var(--text-shadow);
   font-size: 1.4rem;
   margin: 1rem 2rem;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
