@@ -280,6 +280,7 @@ header .navigation-bar .navigation-list li .button-dark-mode i {
   line-height: 7rem;
   color: var(--ligth-text-color);
   margin-top: 1.5rem;
+  text-transform: capitalize;
   text-shadow: var(--text-shadow);
   visibility: hidden;
   opacity: 1;
