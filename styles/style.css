@@ -77,6 +77,49 @@ body .whatsapp i {
   color: #26d366;
 }
 
+body .alert-form-message {
+  padding: 1.5rem;
+  background: #dab319;
+  position: fixed;
+  z-index: 999;
+  right: 2rem;
+  top: 10rem;
+  -webkit-animation: alerMessage 5s ease-in;
+          animation: alerMessage 5s ease-in;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+body .alert-form-message span {
+  color: var(--ligth-text-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@-webkit-keyframes alerMessage {
+  0% {
+    opacity: 1;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes alerMessage {
+  0% {
+    opacity: 1;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
 header {
   width: 100%;
   padding: 2rem 10%;
@@ -187,7 +230,7 @@ header .navigation-bar .navigation-list li .button-dark-mode i {
 
 .home {
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   height: auto;
   background-size: cover;
   display: -webkit-box;

@@ -73,6 +73,36 @@ body {
       color: #26d366;
     }
   }
+
+  .alert-form-message {
+    padding: 1.5rem;
+    background: #dab319;
+    position: fixed;
+    z-index: 999;
+    right: 2rem;
+    top: 10rem;
+    animation: alerMessage 5s ease-in;
+    border-radius: 5px;
+    opacity: 0;
+    span {
+      color: var(--ligth-text-color);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    @keyframes alerMessage {
+      0% {
+        opacity: 1;
+        display: none;
+      }
+
+      100% {
+        opacity: 0;
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
 }
 
 header {
@@ -175,7 +205,7 @@ header {
 
 .home {
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   height: auto;
   background-size: cover;
   display: flex;

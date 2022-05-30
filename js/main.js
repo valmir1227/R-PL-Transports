@@ -1,4 +1,3 @@
-// Menu mobile
 function toggleMobileMenu() {
   let menu = document.querySelector("#menu-btn");
   let navbar = document.querySelector(".navigation-bar");
@@ -14,7 +13,6 @@ function toggleMobileMenu() {
 }
 toggleMobileMenu();
 
-//dark-mode
 function darkMode() {
   const html = document.querySelector("html");
   const iconDarkMode = document.querySelector(".fa-sun");
@@ -28,7 +26,6 @@ function darkMode() {
 }
 darkMode();
 
-//Scroll review
 function scrollReveal() {
   window.scrollReveal = ScrollReveal({ reset: true });
 
@@ -56,47 +53,12 @@ function scrollReveal() {
     delay: 400,
   };
 
-  const homeButton = {
-    ...homeParagraph,
-    delay: 200,
-  };
-
-  const budgetFast = {
-    duration: 600,
-    delay: 200,
-    easing: "ease",
-    origin: "right",
-    rotate: {
-      x: 0,
-      y: 0,
-      z: 0,
-    },
-    cleanup: true,
-    reset: true,
-  };
-
   scrollReveal.reveal(".home-span", homeSpan);
   scrollReveal.reveal(".home-title", homeTitle);
   scrollReveal.reveal(".home-paragraph", homeParagraph);
-  scrollReveal.reveal(".home-button", homeButton);
-  scrollReveal.reveal(".budget-fast", budgetFast);
-  scrollReveal.reveal(".cards-wraper", {
+  scrollReveal.reveal(".scroll-review", {
     duration: 600,
     delay: 300,
-    easing: "ease",
-    origin: "left",
-    rotate: {
-      x: 0,
-      y: 100,
-      z: 0,
-    },
-    cleanup: true,
-    reset: true,
-  });
-
-  scrollReveal.reveal(".text", {
-    duration: 800,
-    delay: 200,
     easing: "ease",
     origin: "left",
     rotate: {
@@ -107,51 +69,10 @@ function scrollReveal() {
     cleanup: true,
     reset: true,
   });
-  scrollReveal.reveal(".about-image", {
-    duration: 800,
-    delay: 200,
-    easing: "ease",
-    origin: "left",
-    rotate: {
-      x: 0,
-      y: 0,
-      z: 0,
-    },
-    cleanup: true,
-    reset: true,
-  });
-
-  scrollReveal.reveal(".title", {
-    duration: 800,
-    delay: 200,
-    easing: "ease",
-    origin: "left",
-    rotate: {
-      x: 0,
-      y: 0,
-      z: 0,
-    },
-    cleanup: true,
-    reset: true,
-  });
-
-  scrollReveal.reveal(".form", {
-    duration: 800,
-    delay: 200,
-    easing: "ease",
-    origin: "left",
-    rotate: {
-      x: 0,
-      y: 0,
-      z: 0,
-    },
-    cleanup: true,
-    reset: true,
-  });
 }
 scrollReveal();
 
-//Scroll Header Indicator
+//Scroll Bar Header Indicator
 function headerScrollBar() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   let height =
@@ -164,7 +85,6 @@ window.onscroll = () => {
   headerScrollBar();
 };
 
-//mudar o nome das variaves
 async function getBrazilianUf() {
   function createNode(element) {
     return document.createElement(element);
@@ -182,34 +102,27 @@ async function getBrazilianUf() {
   await fetch(url)
     .then((resp) => resp.json())
     .then(function (data) {
-      let saidas = data;
+      const ufList = data;
 
-      return saidas.map(function (saida) {
+      return ufList.map(function (ufList) {
         let optionDestination = createNode("option");
         let optionLeaving = createNode("option");
 
-        optionDestination.textContent = `${saida.nome}`;
-        optionLeaving.textContent = `${saida.nome}`;
+        optionDestination.textContent = `${ufList.nome}`;
+        optionLeaving.textContent = `${ufList.nome}`;
 
         append(selectUfLeaving, optionLeaving);
         append(selectUfDestination, optionDestination);
-
-        //console.log(optionLeaving);
       });
     });
 
   function budgetFast() {
     const budgetButton = document.getElementById("budgetButton");
 
-    let optionLeaving;
-    let optionLivingText;
-    let optionDestination;
-    let optionDestinationText;
-
-    budgetButton.addEventListener("click", (e) => {
+    budgetButton.addEventListener("click", () => {
       optionLeaving = selectUfLeaving.children[selectUfLeaving.selectedIndex];
-      optionLivingText = optionLeaving.textContent;
-      optionDestination =
+      let optionLeavingText = optionLeaving.textContent;
+      let optionDestination =
         selectUfDestination.children[selectUfDestination.selectedIndex];
       optionDestinationText = optionDestination.textContent;
 
@@ -217,14 +130,37 @@ async function getBrazilianUf() {
       let destinationCity = document.getElementById("destinationCity").value;
       let leavingCity = document.getElementById("leavingCity").value;
 
-      // O formulário so poderá ser encviado caso esteja totalmente preenchido!
-      //Refatorar código
-      budgetButton.setAttribute(
-        "href",
-        `https://wa.me/5533991113641?text=Olá gostaria de um orçamento:
-          Local de saida ${leavingCity} - ${optionLivingText} para 
-          ${destinationCity} - ${optionDestinationText}, veículo ${vehicleInput}`
-      );
+      if (
+        !vehicleInput ||
+        !leavingCity ||
+        !optionLeavingText ||
+        !destinationCity ||
+        !optionDestinationText ||
+        !vehicleInput
+      ) {
+        const body = document.querySelector("body");
+        const divAlert = document.createElement("div");
+        const alertMessage = document.createElement("span");
+        const alertText = document.createTextNode(
+          "⚠️ Preencha todos os campos do formulário."
+        );
+
+        divAlert.setAttribute("class", "alert-form-message");
+
+        alertMessage.appendChild(alertText);
+
+        divAlert.appendChild(alertMessage);
+
+        body.appendChild(divAlert);
+      } else {
+        budgetButton.setAttribute(
+          "href",
+          `https://wa.me/5533991113641?text=Olá gostaria de um orçamento:
+              Local de saida ${leavingCity.toUpperCase()} - ${optionLeavingText.toUpperCase()} para 
+              ${destinationCity.toUpperCase()} - ${optionDestinationText.toUpperCase()},
+               veículo ${vehicleInput.toUpperCase()}`
+        );
+      }
     });
   }
 
