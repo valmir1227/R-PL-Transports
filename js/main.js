@@ -160,8 +160,6 @@ async function getBrazilianUf() {
               veículo ${vehicleInput.toUpperCase()}`
         );
       }
-      const reloadForClearForm = () => window.location.reload();
-      setTimeout(reloadForClearForm, 1000);
     });
   }
 

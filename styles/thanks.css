@@ -76,6 +76,13 @@ body {
           filter: brightness(0.9);
 }
 
+.storyset {
+  position: fixed;
+  bottom: 0;
+  font-size: 1rem;
+  color: #333333;
+}
+
 @media screen and (min-width: 320px) and (max-width: 900px) {
   .container .image {
     width: 100%;
