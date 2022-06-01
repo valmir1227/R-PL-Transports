@@ -155,9 +155,7 @@ async function getBrazilianUf() {
       } else {
         budgetButton.setAttribute(
           "href",
-          `https://wa.me/5533991113641?text=Olá gostaria de um orçamento: Local de saida ${leavingCity.toUpperCase()} - ${optionLeavingText.toUpperCase()} para 
-              ${destinationCity.toUpperCase()} - ${optionDestinationText.toUpperCase()},
-              veículo ${vehicleInput.toUpperCase()}`
+          `https://wa.me/553172147643?text=Olá gostaria de um orçamento: Local de saida ${leavingCity.toUpperCase()} - ${optionLeavingText.toUpperCase()} para ${destinationCity.toUpperCase()} - ${optionDestinationText.toUpperCase()}, veículo ${vehicleInput.toUpperCase()}`
         );
       }
     });
