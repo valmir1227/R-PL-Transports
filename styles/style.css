@@ -70,6 +70,38 @@ body .whatsapp {
   z-index: 99;
   right: 2rem;
   bottom: 2rem;
+  -webkit-animation: iconWhatsapp 1.5s infinite ease-out;
+          animation: iconWhatsapp 1.5s infinite ease-out;
+}
+
+@-webkit-keyframes iconWhatsapp {
+  0% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  50% {
+    -webkit-transform: translateY(-7.5px);
+            transform: translateY(-7.5px);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes iconWhatsapp {
+  0% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  50% {
+    -webkit-transform: translateY(-7.5px);
+            transform: translateY(-7.5px);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
 }
 
 body .whatsapp i {
@@ -405,6 +437,11 @@ input {
   cursor: pointer;
 }
 
+.button:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
 .data-services {
   margin: 0 auto;
   width: 100%;
@@ -601,6 +638,11 @@ input {
   cursor: pointer;
 }
 
+.contact form button:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
 footer {
   width: 100%;
   height: 30vh;
@@ -653,7 +695,7 @@ footer .container .company a {
   color: var(--ligth-text-color);
   font-size: 1.6rem;
   text-transform: capitalize;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 footer .container .company a:hover {
@@ -667,14 +709,14 @@ footer .footer-contact {
 footer .footer-contact p {
   font-size: 1.6rem;
   color: var(--primary-color);
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 0rem;
 }
 
 footer .footer-contact a {
   color: var(--ligth-text-color);
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 footer .footer-contact a span {
@@ -1194,11 +1236,6 @@ footer p.copy {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.services .cards-wraper .card:hover.card {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .services .cards-wraper .card img {
