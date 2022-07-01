@@ -726,6 +726,10 @@ footer .footer-contact a span {
   font-size: inherit;
 }
 
+footer .address {
+  font-style: normal;
+}
+
 footer .address p.address-title {
   font-size: 2rem;
   font-weight: 500;
