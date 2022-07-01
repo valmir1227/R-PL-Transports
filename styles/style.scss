@@ -437,11 +437,12 @@ input {
       text-shadow: var(--text-shadow);
     }
 
-    p {
+    p,
+    address {
       font-size: 1.6rem;
       color: var(--ligth-text-color);
-      font-weight: 300;
-
+      font-weight: 400;
+      font-style: normal;
       span {
         font-size: 1.6rem;
         color: var(--primary-color);

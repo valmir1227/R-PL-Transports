@@ -514,13 +514,16 @@ input {
   text-shadow: var(--text-shadow);
 }
 
-.contact .title p {
+.contact .title p,
+.contact .title address {
   font-size: 1.6rem;
   color: var(--ligth-text-color);
-  font-weight: 300;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.contact .title p span {
+.contact .title p span,
+.contact .title address span {
   font-size: 1.6rem;
   color: var(--primary-color);
   font-weight: 400;
