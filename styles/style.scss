@@ -9,8 +9,6 @@
   transition: all 0.2s linear;
 }
 
-
-
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -138,11 +136,11 @@ body {
   border-radius: 2px;
   border: 0;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
+  text-transform: capitalize;
   cursor: pointer;
 
   &:hover {
-    scale: 1.01;
+    filter: brightness(0.85);
   }
 }
 
@@ -150,7 +148,7 @@ header {
   width: 100%;
   padding: 2rem 10%;
   position: fixed;
-  z-index: 99;
+  z-index: 99999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -730,21 +728,18 @@ footer {
 
     .cards-wraper {
       height: auto;
-      padding: 2rem 5%;
-      margin: 0;
-
-
+      padding: 4rem 5%;
+      margin: 0 0 4rem 0;
 
       .card {
         width: 100%;
         min-height: 60rem;
         height: auto;
-
+        margin: 1rem 0 1rem;
 
         &:hover {
-
-
-
+          scale: 1.1;
+          z-index: 99;
         }
       }
     }
