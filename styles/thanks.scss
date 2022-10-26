@@ -53,21 +53,22 @@ body {
       letter-spacing: -1px;
     }
 
-    a {
-      display: inline-block;
-      text-decoration: none;
-      color: #333333;
+    a.main-button {
+      display: block;
+      max-width: 200px;
       font-size: 1.6rem;
+      font-family: "Poppins", sans-serif;
       font-weight: 500;
-      padding: 1rem 2rem;
-      border-radius: 5px;
-      background-color: #ed7d45;
-      margin-top: 2rem;
-      transition: all 0.3s ease;
-
-      &:hover {
-        filter: brightness(0.9);
-      }
+      margin: 2rem auto;
+      padding: 1.5rem 3rem;
+      color: #e4e4e4;
+      text-align: center;
+      text-decoration: none;
+      background: #e96320;
+      border-radius: 2px;
+      border: 0;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
     }
   }
 }

@@ -179,6 +179,7 @@ class CardWrapper extends HTMLElement {
           Transportamos motocicletas de todos os portes, com total
           segurança e pontualidade, para todas as cidades do Brasil.
         </p>
+        <button class="main-button">Contratar serviço</button>
       </div>
     </div>
     <div class="card scroll-review">
@@ -191,17 +192,19 @@ class CardWrapper extends HTMLElement {
           sobre plataforma exclusiva e cegonha, para todas as cidades
           brasileiras.
         </p>
+        <button class="main-button">Contratar serviço</button>
       </div>
     </div>
     <div class="card scroll-review">
       <img src="assets/truck.jpg" alt="caminhão iveco na cor laranja" title="Caminhão iveco laranja" />
       <div>
-        <h3>Transporte de caminhões e utilitários</h3>
+        <h3>Transporte de caminhões</h3>
         <p>
           Soluções inteligentes, ágeis e seguras de veículos
           pesados(caminhões e utilitários) para todas as cidades do
           país.
         </p>
+        <button class="main-button">Contratar serviço</button>
       </div>
     </div>
   </div>
