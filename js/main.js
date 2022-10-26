@@ -13,16 +13,28 @@ function toggleMobileMenu() {
 }
 toggleMobileMenu();
 
-function darkMode() {
+function darkModeTimeBased() {
+  const date = new Date().toLocaleTimeString();
   const html = document.querySelector("html");
-  const iconDarkMode = document.querySelector(".fa-sun");
-  const buttonDarkMode = document.querySelector(".button-dark-mode");
 
-  buttonDarkMode.addEventListener("click", () => {
-    html.classList.toggle("dark-mode-theme");
-    iconDarkMode.classList.toggle("fa-sun");
-    iconDarkMode.classList.toggle("fa-moon");
-  });
+  if ((date >= "19:00:00") & (date <= "7:00:00")) {
+    html.classList.add("dark-mode-theme");
+  }
+
+  console.log(date);
+}
+darkModeTimeBased();
+
+function darkMode() {
+const html = document.querySelector("html");
+const iconDarkMode = document.querySelector(".fa-sun");
+const buttonDarkMode = document.querySelector(".button-dark-mode");
+
+ buttonDarkMode.addEventListener("click", () => {
+   html.classList.toggle("dark-mode-theme");
+  iconDarkMode.classList.toggle("fa-sun");
+ iconDarkMode.classList.toggle("fa-moon");
+ });
 }
 darkMode();
 
@@ -208,9 +220,8 @@ class CardWrapper extends HTMLElement {
       </div>
     </div>
   </div>
-`
+`;
   }
 }
 
-customElements.define('cards-wrapper', CardWrapper);
-
+customElements.define("cards-wrapper", CardWrapper);
