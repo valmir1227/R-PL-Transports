@@ -11,7 +11,6 @@ function toggleMobileMenu() {
     navbar.classList.remove("active");
   });
 }
-toggleMobileMenu();
 
 function darkModeTimeBased() {
   const date = new Date().toLocaleTimeString();
@@ -20,10 +19,8 @@ function darkModeTimeBased() {
   if ((date >= "19:00:00") & (date <= "7:00:00")) {
     html.classList.add("dark-mode-theme");
   }
-
-  console.log(date);
 }
-darkModeTimeBased();
+window.addEventListener("load", toggleMobileMenu(), darkModeTimeBased());
 
 function darkMode() {
   const html = document.querySelector("html");
@@ -82,7 +79,7 @@ function scrollReveal() {
     reset: true,
   });
 }
-scrollReveal();
+document.addEventListener("scroll", scrollReveal());
 
 //Scroll Bar Header Indicator
 function headerScrollBar() {
