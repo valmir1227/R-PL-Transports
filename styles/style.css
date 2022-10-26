@@ -14,19 +14,18 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 6px;
-  scrollbar-width: thin;
+  visibility: hidden;
+  display: none;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--secondary-color);
-  scrollbar-color: var(--secondary-color);
+  visibility: hidden;
+  display: none;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  scrollbar-color: var(--primary-color);
-  border-radius: 3px;
+  visibility: hidden;
+  display: none;
 }
 
 ul {
