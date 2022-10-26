@@ -165,3 +165,48 @@ async function getBrazilianUf() {
 }
 
 getBrazilianUf();
+
+class CardWrapper extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="cards-wraper">
+    <div class="card scroll-review">
+      <img src="assets/motos.jpg" alt="Moto na cor laranja exposta em uma loja com alguns carros ao fundo"
+        title="moto laranja" />
+      <div>
+        <h3>Transporte de Motocicletas</h3>
+        <p>
+          Transportamos motocicletas de todos os portes, com total
+          segurança e pontualidade, para todas as cidades do Brasil.
+        </p>
+      </div>
+    </div>
+    <div class="card scroll-review">
+      <img src="assets/carro.jpg" alt="Carro fiat mobi laranja com alguns predios ao fundo"
+        title="Fiat mobi laranja" />
+      <div>
+        <h3>Transporte de Automóveis</h3>
+        <p>
+          Transportamos buggys, veículos de passeio, SUVs e caminhonetes
+          sobre plataforma exclusiva e cegonha, para todas as cidades
+          brasileiras.
+        </p>
+      </div>
+    </div>
+    <div class="card scroll-review">
+      <img src="assets/truck.jpg" alt="caminhão iveco na cor laranja" title="Caminhão iveco laranja" />
+      <div>
+        <h3>Transporte de caminhões e utilitários</h3>
+        <p>
+          Soluções inteligentes, ágeis e seguras de veículos
+          pesados(caminhões e utilitários) para todas as cidades do
+          país.
+        </p>
+      </div>
+    </div>
+  </div>
+`
+  }
+}
+
+customElements.define('cards-wrapper', CardWrapper);
