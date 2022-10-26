@@ -26,15 +26,15 @@ function darkModeTimeBased() {
 darkModeTimeBased();
 
 function darkMode() {
-const html = document.querySelector("html");
-const iconDarkMode = document.querySelector(".fa-sun");
-const buttonDarkMode = document.querySelector(".button-dark-mode");
+  const html = document.querySelector("html");
+  const iconDarkMode = document.querySelector(".fa-sun");
+  const buttonDarkMode = document.querySelector(".button-dark-mode");
 
- buttonDarkMode.addEventListener("click", () => {
-   html.classList.toggle("dark-mode-theme");
-  iconDarkMode.classList.toggle("fa-sun");
- iconDarkMode.classList.toggle("fa-moon");
- });
+  buttonDarkMode.addEventListener("click", () => {
+    html.classList.toggle("dark-mode-theme");
+    iconDarkMode.classList.toggle("fa-sun");
+    iconDarkMode.classList.toggle("fa-moon");
+  });
 }
 darkMode();
 
@@ -191,7 +191,7 @@ class CardWrapper extends HTMLElement {
           Transportamos motocicletas de todos os portes, com total
           segurança e pontualidade, para todas as cidades do Brasil.
         </p>
-        <button class="main-button">Contratar serviço</button>
+        <a href="https://wa.me/553172147643?text" target="_blank" class="main-button">Contratar serviço</a>
       </div>
     </div>
     <div class="card scroll-review">
@@ -204,7 +204,7 @@ class CardWrapper extends HTMLElement {
           sobre plataforma exclusiva e cegonha, para todas as cidades
           brasileiras.
         </p>
-        <button class="main-button">Contratar serviço</button>
+        <a href="https://wa.me/553172147643?text" target="_blank" class="main-button">Contratar serviço</a>
       </div>
     </div>
     <div class="card scroll-review">
@@ -216,7 +216,7 @@ class CardWrapper extends HTMLElement {
           pesados(caminhões e utilitários) para todas as cidades do
           país.
         </p>
-        <button class="main-button">Contratar serviço</button>
+        <a href="https://wa.me/553172147643?text" target="_blank" class="main-button">Contratar serviço</a>
       </div>
     </div>
   </div>
