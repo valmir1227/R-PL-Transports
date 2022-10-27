@@ -742,6 +742,9 @@ footer p.copy {
   }
 }
 @media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
   header #menu-btn {
     font-size: 3rem;
     color: var(--primary-color);

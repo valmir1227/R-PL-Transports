@@ -16,7 +16,7 @@ function darkModeTimeBased() {
   const date = new Date().toLocaleTimeString();
   const html = document.querySelector("html");
 
-  if ((date >= "19:00:00") & (date <= "7:00:00")) {
+  if ((date >= "19:00:00") || (date <= "7:00:00")) {
     html.classList.add("dark-mode-theme");
   }
 }
